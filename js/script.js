@@ -28,12 +28,11 @@ const sp = document.querySelector('.copy-code');
 const target = document.querySelector('.code-inner');
 
 sp.addEventListener('click', () => {
-    // Create a temporary textarea element to hold the text to copy
+    const textToCopy = target.textContent.replace(/\t/g, '').replace(/ {2,}/g, ' ');
     const textarea = document.createElement('textarea');
-    textarea.value = target.textContent;
+    textarea.value = textToCopy;
     document.body.appendChild(textarea);
 
-    // Select and copy the text from the temporary textarea element
     textarea.select();
     // TODO: Fix deprecated 'execCommand()'
     document.execCommand('copy');
