@@ -29,17 +29,15 @@ const target = document.querySelector('.code-inner');
 
 sp.addEventListener('click', () => {
     const textToCopy = target.textContent.replace(/\t/g, '').replace(/ {2,}/g, ' ');
-    const textarea = document.createElement('textarea');
-    textarea.value = textToCopy;
-    document.body.appendChild(textarea);
 
-    textarea.select();
-    // TODO: Fix deprecated 'execCommand()'
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    sp.textContent = 'Copied!';
-
-    setTimeout(() => {
-        sp.textContent = 'Copy Code';
-    }, 1000);
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            sp.textContent = 'Copied!';
+            setTimeout(() => {
+                sp.textContent = 'Copy Code';
+            }, 1000);
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
 });
