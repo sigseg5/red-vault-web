@@ -18,9 +18,9 @@
           <div>
             <h1 class="main-heading">Red Vault</h1>
             <p class="main-heading-text">
-              Создание облачного браузера с госсертификатами РФ, который даст
-              возможность пользоваться веб-сервисами недоступными без установки
-              данных сертификатов.
+              Облачный браузер с государственными сертификатами МинЦифры РФ.
+              Теперь вы можете безопасно пользоваться веб-сервисами,
+              недоступными без установки корневых сертификатов.
             </p>
 
             <button
@@ -39,11 +39,8 @@
             id="main-logo"
           >
         </div>
-        <a
-          class="link"
-          href="https://certizdat.org:80"
-          target="_blank"
-          >ссылка на исследование</a
+        <a class="link" href="https://certizdat.org:80" target="_blank"
+          >А какие сайты недоступны?</a
         >
       </section>
 
@@ -77,23 +74,31 @@
           <p class="main-text solution-text">
             Для решения задачи используется slim-образ Debian 11 в Docker,
             который автоматически запускает noVNC сервер. Доступ к сервису
-            возможен через любой современный браузер. Внутри него автоматически
-            устанавливаются RU CA и настраивается Chromium. <br><br>
+            возможен через любой современный браузер. Внутри облачного браузера
+            автоматически устанавливаются RU CA и настраивается Chromium.
+            <br><br>
             После авторизации, браузер загружается автоматически, без
             необходимости выполнения каких-либо дополнительных действий. Кроме
             того, контейнер поддерживает ряд настроек, такие как графическое
             разрешение сеанса и установка/снятие пароля на подключение.<br><br>
             Этот контейнер можно развернуть на любом arm64/x86-64 совместимом
-            сервере. Также рекомендуется выпустить SSL-сертификат для повышения
-            уровня безопасности.
+            сервере. Также рекомендуется выпустить SSL-сертификат для
+            обеспечения безопасности канала связи (например сервис Let's
+            Encrypt).
           </p>
         </div>
-        <a class="link-second" href="#" target="_blank">ссылка на проект</a>
+        <a
+          class="link-second"
+          href="https://github.com/sigseg5/red-vaule"
+          target="_blank"
+          >Страница проекта на GitHub</a
+        >
       </section>
 
       <section class="main-section code-section">
         <h2 class="long-sub-heading code-heading">
-          Для запуска скопируйте код и вставьте в окно терминала:
+          Для запуска скопируйте код и вставьте в окно терминала на сервере в
+          папке проекта:
         </h2>
 
         <div class="import-code">
@@ -104,7 +109,7 @@
             </div>
           </div>
           <p class="code-inner">
-            docker build . -t demhack<br><br>
+            docker build . -t demhack &&<br><br>
             &#x09;docker run -d -p 5901:5901 -p 6901:6901 -e VNC_PW=hack -e
             VNC_RESOLUTION=1440x794 demhack
           </p>
@@ -119,15 +124,16 @@
               <ul>
                 <li class="bullet-li">
                   Добавление инструкции про подключение SSL-сертификата к
-                  веб-сайту
+                  веб-сайту;
                 </li>
                 <li class="bullet-li">
-                  Автообновление ОС для обеспечения безопасности
+                  Автообновление ОС для обеспечения безопасности;
                 </li>
-                <li class="bullet-li">Добавление браузера Firefox</li>
+                <li class="bullet-li">Добавление браузера Firefox;</li>
                 <li class="bullet-li">
-                  Потенциальный вариант монетизации – централизованный хостинг и
-                  выдача доступа к контейнерам после оплаты (SaaS решение)
+                  Потенциальный вариант монетизации – централизованное
+                  предоставление услуги выдачи доступа к контейнерам после
+                  оплаты (SaaS решение);
                 </li>
               </ul>
             </div>
@@ -148,28 +154,35 @@
           <h2 class="long-sub-heading">Наша команда:</h2>
           <div class="role-photo">
             <ul class="main-text ul-text">
-              <li class="bullet-li bullet-li-first">
-                Автор проекта: Кирилл
+              <li class="bullet-li bullet-li-first">Автор проекта: Кирилл</li>
+              <li class="bullet-li">
+                <a href="https://github.com/sigseg5/" class="link">GitHub</a>
               </li>
-              <li class="bullet-li"><a href="https://github.com/sigseg5/" class="link">GitHub</a></li>
-              <li class="bullet-li"><a href="https://www.linkedin.com/in/sigseg5/" class="link">LinkedIn</a></li>
+              <li class="bullet-li">
+                <a href="https://www.linkedin.com/in/sigseg5/" class="link"
+                  >LinkedIn</a
+                >
+              </li>
             </ul>
             <ul class="main-text ul-text">
-                <li class="bullet-li bullet-li-first">
-                  Designer: Екатерина
-                </li>
-                <li class="bullet-li">
-                  <a
-                    href="https://www.behance.net/3f69f095"
-                    class="link link-about"
-                    >Behance</a
-                  >
-                </li>
-                <li class="bullet-li">
-                  <a href="https://www.linkedin.com/in/ekaterina-frolenko/" class="link link-about">LinkedIn</a>
-                </li>
-              </ul>
+              <li class="bullet-li bullet-li-first">Designer: Екатерина</li>
+              <li class="bullet-li">
+                <a
+                  href="https://www.behance.net/3f69f095"
+                  class="link link-about"
+                  >Behance</a
+                >
+              </li>
+              <li class="bullet-li">
+                <a
+                  href="https://www.linkedin.com/in/ekaterina-frolenko/"
+                  class="link link-about"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
           </div>
+        </div>
       </section>
 
       <footer class="main-footer">
