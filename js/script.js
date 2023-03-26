@@ -38,4 +38,8 @@ sp.addEventListener('click', () => {
     document.execCommand('copy');
     document.body.removeChild(textarea);
     sp.textContent = 'Copied!';
+
+    setTimeout(() => {
+        sp.textContent = 'Copy Code';
+    }, 1000);
 });
