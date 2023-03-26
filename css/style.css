@@ -1,0 +1,388 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    font-size: 22px;
+    margin: 0 0px 20px 0px;
+    background-color: #ffffff;
+}
+
+ul {
+    padding: 50px 10px;
+    margin: 0px;
+}
+
+li {
+    padding-left: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    line-height: 1.5;
+}
+
+li img {
+    left: 0;
+    top: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.main-title {
+    width: 816px;
+    height: 60px;
+    color: #000000;
+}
+
+.main-section {
+    margin: 0;
+    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+.trouble-sub-heading {
+    margin-right: 0px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding: 12px 32px;
+    background-color: #adf13f;
+    font-size: 24px;
+    text-align: left;
+    width: auto;
+}
+
+.long-sub-heading {
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding: 12px 32px;
+    background-color: #adf13f;
+    font-size: 24px;
+    text-align: left;
+}
+
+.short-sub-heading {
+    width: 80%;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding: 12px 32px;
+    background-color: #adf13f;
+    font-size: 24px;
+    text-align: left;
+}
+
+.bullet-li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.bullet-li-first {
+    list-style-type: none;
+}
+
+.import-code {
+    width: 80%;
+    height: 320px;
+    padding: 0 0 12px;
+    border-color: #222226;
+    background: #222226;
+    border-radius: 20px 20px 20px 20px;
+    border-style: solid;
+    border-width: 0;
+    text-align: left;
+}
+
+.code-inner {
+    color: #ffffff;
+    padding: 0 48px;
+}
+
+.import-code-upper-part {
+    height: 24px;
+    padding: 12px 32px;
+    background: #3e404e;
+    border-radius: 20px 20px 0px 0px;
+    border-style: solid;
+    border-width: 0;
+    border-color: #222226;
+}
+
+.import-code-bar {
+    overflow: hidden;
+}
+
+.plan-guy {
+    align-items: center;
+}
+
+.bash {
+    float: left;
+    color: #ffffff;
+}
+
+.copy-code {
+    float: right;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.copy-code:hover {
+    text-decoration: underline;
+}
+
+.main-text {
+    margin: 0px;
+    padding: 12px 32px;
+    text-align: left;
+}
+
+.short-main-text {
+    width: 80%;
+}
+
+.trouble-heading-text-container {
+    width: 850px;
+}
+
+.trouble-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+}
+
+.trouble-text {
+    min-width: 360px;
+    margin: 0px;
+}
+
+.plan-heading {
+    align-items: flex-start;
+}
+
+.team-heading {
+    width: 80%;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding: 12px 32px;
+    background-color: #adf13f;
+    font-size: 24px;
+    text-align: left;
+}
+
+.role-photo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.first-photo-container {
+    padding-left: 150px;
+}
+
+.second-photo-container {
+    padding-right: 150px;
+}
+
+.main-heading {
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 60px;
+    margin-left: 20px;
+    text-align: left;
+    color: #000000;
+}
+
+.main-heading-text {
+    width: 816px;
+    height: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+    text-align: left;
+    color: #000000;
+}
+
+.button {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 30px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 60px;
+    padding: 8px 24px;
+    background-color: #adf13f;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+        inset -10px -10px 20px rgba(0, 0, 0, 0.15),
+        inset 10px 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.button:hover {
+    background-color: #e23030;
+    background: rgba(241, 63, 63, 0.63);
+    box-shadow: inset 10px 10px 11px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+    background-color: #f13f3f;
+}
+
+.logo {
+    width: 316px;
+    height: 354px;
+}
+
+.text-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link-to-research {
+    display: flex;
+    flex-direction: row;
+    font-style: normal;
+    margin-left: 20px;
+    margin-top: 160px;
+    align-items: center;
+}
+
+.link,
+.link:visited {
+    text-decoration: underline;
+    flex-direction: row;
+    font-style: normal;
+    margin-top: 130px;
+    align-items: center;
+    color: #000000;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #f13f3f;
+}
+
+.link-second {
+    text-decoration: underline;
+    flex-direction: row;
+    font-style: normal;
+    margin-left: 20px;
+    margin-top: 40px;
+    align-items: center;
+    color: #000000;
+}
+
+.link-second:hover {
+    text-decoration: none;
+    color: #f13f3f;
+}
+
+.heading-solution {
+    background-color: #adf13f;
+    font-size: 24px;
+    text-align: left;
+}
+
+.solution-text {
+    text-align: left;
+}
+
+.top-section {
+    height: 100vh;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.trouble-section {
+    height: 100vh;
+    justify-content: center;
+}
+
+.code-section {
+    align-items: center;
+}
+
+.code-heading {
+    width: 95%;
+    margin-bottom: 24px;
+}
+
+.logo-back {
+    background-color: #222226;
+    border-radius: 5px;
+}
+
+.supporters {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0;
+    opacity: 0.7;
+}
+
+.supporters-item {
+    padding: 0;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+}
+
+.supporters-item:last-child {
+    width: 42px;
+    height: 42px;
+}
+
+.supporters-item:hover {
+    opacity: 0.7;
+}
+
+.hidden-text {
+    font-size: 0;
+}
+
+.main-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-footer-text {
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 10px;
+}

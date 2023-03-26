@@ -1,0 +1,45 @@
+/* Navigation */
+@media screen and (max-width: 1000px) {
+
+    .main-container,
+    .main-section {
+      width: 800px;
+    }
+  
+    .text-logo-container {
+      flex-wrap: wrap;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .trouble-heading-text-container {
+      width: 450px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .trouble-heading-text-container {
+      width: 450px;
+    }
+  
+    .trouble-text {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 1188px) {
+    .logo {
+      display: none;
+    }
+  
+    .text-logo-container {
+      justify-content: center;
+    }
+  
+    .main-heading-text {
+      width: 870px;
+    }
+  }
+  
